@@ -1,6 +1,6 @@
 <?php
 // Connect to the database
-require_once './db.php';
+require_once '../includes/db.php';
 
 // If the database connection fails
 if (!isset($pdo)) {
@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <h1>Welcome</h1>
       <p>Enter your details and start your journey with us.</p>
           <img
-          src="./images/logpers.png"
+          src="../assets/images/logpers.png"
           alt="Welcome Person"
           class="person-image"
         />

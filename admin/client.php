@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../includes/db.php';
 
 try {
     $stmt = $pdo->query("SELECT user_id, username, email FROM  client");  

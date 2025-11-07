@@ -1,5 +1,5 @@
 <?php
-include "db.php"; 
+include "../includes/db.php"; 
 $halls = $pdo->query("SELECT * FROM hall")->fetchAll();
 $stmt = $pdo->query("SELECT COUNT(*) FROM hall");
 $totalHalls = $stmt->fetchColumn();
@@ -254,11 +254,11 @@ $totalHalls = $stmt->fetchColumn();
 </head>
 <body>
   <div class="sidebar">
-    <img src="./icon/hallane.png" alt="logo" class="logo" />
+    <img src="../../assets/icons/hallane.png" alt="logo" class="logo" />
     <div class="nav-item active">
       <i class="fas fa-chart-pie"></i> Dashboard
     </div>
-    <a href="booking.php" class="nav-item" style="color: white; text-decoration: none;">
+    <a href="../pages/booking.php" class="nav-item" style="color: white; text-decoration: none;">
       <i class="fas fa-calendar-check"></i> Bookings
     </a>
     <a href="client.php" class="nav-item" style="color: white; text-decoration: none;">
@@ -282,7 +282,7 @@ $totalHalls = $stmt->fetchColumn();
       <div class="header-actions">
         <button><i class="fas fa-bell"></i></button>
         <button><i class="fas fa-envelope"></i></button>
-        <a href="logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a href="../pages/logout.php" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
       </div>
     </div>

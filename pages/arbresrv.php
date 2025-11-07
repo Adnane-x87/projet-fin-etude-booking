@@ -1,5 +1,5 @@
 <?php
-require_once './db.php';
+require_once '../includes/db.php';
 
 $errors = [];
 $success = "";
@@ -187,7 +187,7 @@ if ($hall_id) {
   <body>
     <header>
       <a href="arab.php"
-        ><img src="./icon/arablogo.png" alt="logo" class="logo"
+        ><img src="../assets/icons/arablogo.png" alt="logo" class="logo"
       /></a>
     </header>
 

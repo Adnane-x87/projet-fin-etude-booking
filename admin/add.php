@@ -1,5 +1,5 @@
 <?php
-include "db.php"; 
+include "../includes/db.php"; 
 
 if (isset($_POST['submit'])) {
     $hall_id = $_POST['hall_id'];
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             $arabic_title, $arabic_description, $arabic_local, $time, $arabic_time
         ]);
 
-        header("Location: index.php");
+        header("Location: dashbord.php");
         exit;
     } catch (PDOException $e) {
         echo "An error occurred while entering data: " . $e->getMessage();

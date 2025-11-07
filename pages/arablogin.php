@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './db.php';
+require_once '../includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id_admin'];
             $_SESSION['user_type'] = 'admin';
-            header('Location: dashbord.php');
+            header('Location: ../admin/dashbord.php');
             exit;
         }
 
@@ -224,13 +224,13 @@ unset($_SESSION['login_message'], $_SESSION['login_message_type']);
       <div class="left-section">
         <div class="welcome-text">
           <a href="arab.php"
-            ><img src="./icon/arablogo.png" alt="شعار" class="logo" /></a
+            ><img src="../assets/icons/arablogo.png" alt="شعار" class="logo" /></a
           ><br /><br />
           <h1>مرحبًا بك</h1>
           <p>أدخل معلوماتك الشخصية</p>
           <p>وابدأ رحلتك معنا</p>
         </div>
-        <img src="./images/logpers.png" alt="شخص ترحيبي" class="person-image" />
+        <img src="../assets/images/logpers.png" alt="شخص ترحيبي" class="person-image" />
       </div>
 
       <div class="right-section">

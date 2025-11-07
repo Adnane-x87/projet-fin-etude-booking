@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'db.php'; 
+include '../includes/db.php'; 
 $information = $pdo->query("SELECT * FROM hall"); 
 
 // Get client info if logged in
@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="arab.css" />
+    <link rel="stylesheet" href="../assets/css/arab.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
       rel="stylesheet"
@@ -46,7 +46,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
             <li><a href="#five">اتصل بنا</a></li>
           </ul>
         </nav>
-        <img src="./icon/arablogo.png" alt="logo" class="logo" />
+        <img src="../assets/icons/arablogo.png" alt="logo" class="logo" />
       </div>
 
       <div class="header">
@@ -61,7 +61,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <a class="welcom-btn" href="tasjil.php">سجل الآن</a>
         </div>
         <div class="header-img">
-          <img src="./images/hedar-image.jpg" alt="House image" class="house" />
+          <img src="../assets/images/hedar-image.jpg" alt="House image" class="house" />
         </div>
       </div>
     </section>
@@ -76,7 +76,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <div class="cards-container">
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Checkmark.png" alt="Team Icon" />
+                <img src="../assets/icons/Checkmark.png" alt="Team Icon" />
               </div>
               <h3>فريق متخصص</h3>
               <p>
@@ -89,7 +89,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
 
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Price Tag USD.png" alt="Goal Icon" />
+                <img src="../assets/icons/Price Tag USD.png" alt="Goal Icon" />
               </div>
               <h3>هدفنا</h3>
               <p>
@@ -101,7 +101,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
 
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Goal.png" alt="Vision Icon" />
+                <img src="../assets/icons/Goal.png" alt="Vision Icon" />
               </div>
               <h3>رؤيتنا</h3>
               <p>
@@ -131,7 +131,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <?php foreach ($information as $key => $value): ?>
             <div class="venue-card">
               <div class="image-section">
-                <img class="image-section" src="images/<?= $value['image'] ?>" />
+                <img class="image-section" src="../assets/images/<?= $value['image'] ?>" />
                 <div class="top-tags">
                   <span class="tag"><i class="fas fa-map-marker-alt"></i> <?= $value['arabic_local'] ?></span>
                   <span class="tag"><i class="fas fa-users"></i> <?= $value['capacity']  ?></span>
@@ -176,7 +176,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           </p>
           <div class="author">
             <div class="author-avatar">
-              <img src="./images/profil1.png" alt="profil" />
+              <img src="../assets/images/profil1.png" alt="profil" />
             </div>
             <span class="author-name"> ريم العتيبي</span>
           </div>
@@ -189,7 +189,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           </p>
           <div class="author">
             <div class="author-avatar">
-              <img src="./images/profil.png" alt="profil" />
+              <img src="../assets/images/profil.png" alt="profil" />
             </div>
             <span class="author-name">عبدالله منصور</span>
           </div>

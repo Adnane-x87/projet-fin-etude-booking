@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../includes/db.php';
 
 if (isset($_GET['hall_id'])) {
     $id = (int) $_GET['hall_id'];

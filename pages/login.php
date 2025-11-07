@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './db.php';
+require_once '../includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id_admin'];
             $_SESSION['user_type'] = 'admin';
-            header('Location: dashbord.php');
+            header('Location: ../admin/dashbord.php');
             exit;
         }
 
@@ -239,7 +239,7 @@ unset($_SESSION['login_message'], $_SESSION['login_message_type']);
 <div class="login-container">
   <div class="left-section">
     <a href="index.php">
-      <img src="./icon/hallane.png" alt="logo" class="logo" />
+      <img src="../assets/icons/hallane.png" alt="logo" class="logo" />
     </a>
     <div class="welcome-text">
       <h1>Welcome</h1>
@@ -247,7 +247,7 @@ unset($_SESSION['login_message'], $_SESSION['login_message_type']);
       <p>start journey with us</p>
     </div>
     <img
-      src="./images/logpers.png"
+      src="../assets/images/logpers.png"
       alt="Welcome Person"
       class="person-image"
     />

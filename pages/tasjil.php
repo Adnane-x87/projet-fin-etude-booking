@@ -1,5 +1,5 @@
 <?php // Connect to the database
-require_once './db.php';
+require_once '../includes/db.php';
 
 // If the database connection fails
 if (!isset($pdo)) {
@@ -205,7 +205,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-container">
       <div class="left-section">
         <a href="arab.php">
-          <img src="./icon/arablogo.png" alt="logo" class="logo" />
+          <img src="../assets/icons/arablogo.png" alt="logo" class="logo" />
         </a>
         <div class="welcome-text">
           <h1>مرحباً</h1>
@@ -213,7 +213,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <p>ابدأ رحلتك معنا</p>
         </div>
         <img
-          src="./images/logpers.png"
+          src="../assets/images/logpers.png"
           alt="Welcome Person"
           class="person-image"
         />

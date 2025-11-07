@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'db.php'; 
+include '../includes/db.php'; 
 $information = $pdo->query("SELECT * FROM hall"); 
 
 // Get client info if logged in
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
       rel="stylesheet"
@@ -29,14 +29,14 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script src="./js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 
     <title>Hallane</title>
   </head>
   <body>
     <section id="one">
       <div class="navbar">
-        <img src="./icon/hallane.png" alt="logo" class="logo" />
+        <img src="../assets/icons/hallane.png" alt="logo" class="logo" />
 
         <nav>
           <ul>
@@ -73,7 +73,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <a class="welcom-btn" href="signup.php">Register Now</a>
         </div>
         <div class="header-img">
-          <img src="./images/hedar-image.jpg" alt="House image" class="house" />
+          <img src="../assets/images/hedar-image.jpg" alt="House image" class="house" />
         </div>
       </div>
     </section>
@@ -88,7 +88,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <div class="cards-container">
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Checkmark.png" alt="Team Icon" />
+                <img src="../assets/icons/Checkmark.png" alt="Team Icon" />
               </div>
               <h3>Specialized Team</h3>
               <p>
@@ -102,7 +102,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
 
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Price Tag USD.png" alt="Goal Icon" />
+                <img src="../assets/icons/Price Tag USD.png" alt="Goal Icon" />
               </div>
               <h3>Our Goal</h3>
               <p>
@@ -116,7 +116,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
 
             <div class="card">
               <div class="card-icon">
-                <img src="./icon/Goal.png" alt="Vision Icon" />
+                <img src="../assets/icons/Goal.png" alt="Vision Icon" />
               </div>
               <h3>Our Vision</h3>
               <p>
@@ -147,7 +147,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           <?php foreach ($information as $key => $value): ?>
             <div class="venue-card">
               <div class="image-section">
-                <img class="image-section" src="images/<?= $value['image'] ?>" />
+                <img class="image-section" src="../assets/images/<?= $value['image'] ?>" />
                 <div class="top-tags">
                   <span class="tag"><i class="fas fa-map-marker-alt"></i> <?= $value['local'] ?></span>
                   <span class="tag"><i class="fas fa-users"></i> <?= $value['capacity']  ?></span>
@@ -197,7 +197,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           </p>
           <div class="author">
             <div class="author-avatar">
-              <img src="./images/profil1.png" alt="profil" />
+              <img src="../assets/images/profil1.png" alt="profil" />
             </div>
             <span class="author-name">Rim Alatibi</span>
           </div>
@@ -211,7 +211,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_type']) && $_SESSION['u
           </p>
           <div class="author">
             <div class="author-avatar">
-              <img src="./images/profil.png" alt="profil" />
+              <img src="../assets/images/profil.png" alt="profil" />
             </div>
             <span class="author-name"> Abdullah Mansour</span>
           </div>

@@ -1,5 +1,5 @@
 <?php
-require_once './db.php';
+require_once '../includes/db.php';
 
 $errors = [];
 $success = "";
@@ -66,7 +66,7 @@ if ($hall_id) {
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 
     <style>
       body {
@@ -191,7 +191,7 @@ if ($hall_id) {
   <body>
     <header>
       <a href="index.php"
-        ><img src="./icon/hallane.png" alt="logo" class="logo"
+        ><img src="../assets/icons/hallane.png" alt="logo" class="logo"
       /></a>
     </header>
 

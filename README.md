@@ -87,7 +87,3 @@ Ce projet a été développé dans le cadre d'un projet de fin d'études. Les co
 ## 📄 Licence
 
 Ce projet est sous licence **MIT**. Voir le fichier `LICENSE` (si existant) pour plus de détails.
-
----
-
-*Fait avec ❤️ par Manus AI pour le propriétaire du dépôt.*
